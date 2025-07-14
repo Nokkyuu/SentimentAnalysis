@@ -57,7 +57,12 @@ def build_graph(full_text_result, per_sentence_result):
         st.altair_chart(chart, use_container_width=True)
 
 def display_sentiment_analysis_results(full_text_result, per_sentence_result, col3):
-    """Display the results of the sentiment analysis."""
+    """Display the results of the sentiment analysis.
+    
+    Args:
+        full_text_result (dict): The full text analysis results including polarity, subjectivity, and confidence.
+        per_sentence_result (dict): The per sentence analysis results including average polarity, average subjectivity, and confidence.
+        col3 (streamlit.columns): The column to display the results in"""
     if full_text_result:
         try:
             with col3:

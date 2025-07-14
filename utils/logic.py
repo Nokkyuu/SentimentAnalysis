@@ -6,6 +6,7 @@ import pandas as pd
 logger = logging.getLogger("frontend")
 
 class RequestHandler():
+    """A class to handle requests to the sentiment analysis API."""
     def __init__(self, url: str = "http://localhost:8000"):
         """Initialize the RequestHandler with a base URL."""
         self.url = url
